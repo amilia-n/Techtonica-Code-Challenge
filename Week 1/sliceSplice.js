@@ -15,8 +15,19 @@
 // The first array should remain the same after the function runs.
 // The second array should remain the same after the function runs.
 
-function frankenSplice(arr1, arr2, num){
-let ans = arr2.slice();
-ans.splice(num, 0, ...arr1);
-return ans;
+
+
+/*
+Pseudo:
+Para: arr1, arr2, [i]
+1. Copy arr1 into arr2 at [n] if arr2
+return newArr
+arr1 and arr2 should stay the same
+use slice (TO CREATE A COPY) and splice (TO ADD OR REMOVE)
+Syntax splice: array.splice(index(req), count, item1, ....., itemX)
+Syntax slice: slice() , slice(start) , slice(start, end)
+*/
+
+function frankenSplice(arr1, arr2, n) {
+    return arr2.slice().splice(n, 0, ...arr1);
 }
